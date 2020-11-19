@@ -16,6 +16,7 @@ html {
 }
 
 .CROIX.is-active {
+    top: 1.4%;
     right: 5%;
 }
 
@@ -29,7 +30,7 @@ html {
     left: 0;
 
     z-index: 2002;
-    background: pink;
+    background: white;
     position: absolute;
 
     font-family: 'Poppins', sans-serif;  
@@ -82,7 +83,7 @@ html {
 .mobile-MENU .menu li img{
     width: 40px;
     vertical-align: middle;
-    color: black;
+    fill: black;
 }
 
 .mobile-MENU .logo {
