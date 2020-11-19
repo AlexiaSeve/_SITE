@@ -88,8 +88,8 @@ body{
 
 .main-container{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+
 }
 
 .container {  
@@ -187,7 +187,7 @@ body{
 .END {
     z-index: -100;
 
-    font-family: 'eczar', serif;
+    font-family: 'Eczar', serif;
     font-size: 1em;
 
     padding: 10px;
@@ -213,28 +213,30 @@ body{
 }
 /*************** FIN boutons end ***************/
 
+/*************** BAS ***************/
+.BAS {
+    display: flex;
+    flex-direction: column;
+
+}
 
 .selecteur{
     z-index: -100;
 
-    margin:  auto;
-    width: 10%;
-    bottom: 0;
-
-    display: block;
-    justify-content: space-between;
-    align-content: baseline;
+    display: flex;
+    flex-direction: column;
   }
 
 .selecteur p {
-    text-align: center;
     font-family: 'eczar', serif;
     font-size: 1.2em;
 }
 
 .BoutonSelecteur {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    width: 80px;
 }
 
 .ball {
@@ -283,7 +285,6 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
   }
-
   
   input:checked + .slider {
     background-color: black;
