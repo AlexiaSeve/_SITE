@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    background-color: #ffc918 ;
+}
+
+
+#photoDRAG{
+
+    max-width: 30%;
+    max-height: 30%;
+
+    position: fixed;
+
+
+}

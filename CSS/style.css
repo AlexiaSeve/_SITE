@@ -1,0 +1,173 @@
+
+html {
+    font-size: 100%;
+}
+
+*{ /*  TOUTES LES BALISES */
+    box-sizing: border-box; /*  Les balises ne vont pas grandir avec le padding*/
+}
+
+/******* HEADER *******/
+
+/* navigation */
+
+header {
+    width: 100%;
+    height: 160px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between; /*  les éléments se placent de chaque coté */
+    align-items: center; /*  ils se centrent entre eux */ 
+    margin: 0px;
+    padding : 0px;
+}
+
+.navigation ul{
+    display: flex;
+    margin-right: 40px;
+}
+
+.logo ul {
+    display: flex;
+}
+
+ ul {
+    list-style: none;
+ }
+
+ .logo li {
+    padding-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+    font-size: 1.2em;
+    margin: auto;
+    height: auto;
+ }
+
+ li img{
+    width: 50px;
+ }
+
+/******* menu *******/
+
+.menu li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+.menu img{
+    width: 30px;
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+/******* fin menu *******/
+
+
+
+/*** FIN navigation ***/
+
+body{
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc918;
+    position: relative;
+}
+
+/*** PHOTOS ***/
+
+.containerPhoto {  
+    display: flex;
+    overflow: scroll;
+    justify-content: space-between; /*  les éléments se placent de chaque coté */
+ 
+    margin-left: 40px;
+    width: 100%;
+}
+
+h1 {
+    z-index: -1;
+    color: black;
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    height: 5vw;
+    line-height: 2vw;
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+p {
+    z-index: -1;
+    color: black;
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+.photo img{
+    z-index: 1000;
+    width:400px; 
+    display: block;
+    margin-right: 40px;
+    border: 5px solid white;
+}
+
+.overlay {
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+  }
+
+.photo a:hover .overlay{
+    opacity: 0.5;
+    
+}
+
+
+/******* FOOTER *******/
+
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    margin: 0px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reseaux a{
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    vertical-align: middle;
+    padding-right: 50px;
+    color: white;
+}
+.reseaux img{
+    width: 20px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+/******* fin FOOTER *******/
+
