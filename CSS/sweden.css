@@ -16,9 +16,8 @@ html {
 }
 
 header {
-
     width: 100%;
-    height: 160px;
+    height: 140px;
 }
 
 a {
@@ -48,7 +47,6 @@ a {
  }
 
  .logo li {
-    z-index: 1000;
     padding-right: 20px;
     font-family: 'Poppins', sans-serif;
     vertical-align: middle;
@@ -342,7 +340,6 @@ footer {
     display: flex;
     justify-content: flex-end;
 }
-
 
 .reseaux ul {
     display: flex;
