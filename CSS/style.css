@@ -227,13 +227,14 @@ Timeline
     border: solid black 1px;
     transition: background-color 0.2s ease;
     background-color: #ffc918;
+    cursor: pointer;
 }
 
 .timeline .marker.active::before {
     background-color: black;
 }
 
-.containerPhoto div:last-child > img {
+.containerPhoto div:last-child img {
     margin-right: 80vw;
 }
 
@@ -247,4 +248,17 @@ body {
 
 .containerPhoto {
     scrollbar-width: none;
+    scroll-behavior: smooth
+}
+
+.scroll-invitation {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 80px;
+}
+
+.scroll-invitation p {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 20px;
 }

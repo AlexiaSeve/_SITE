@@ -54,8 +54,9 @@ function bindImagesToDate() {
 
 function observeScroll() {
     for (const [index, date] of Object.entries(dates)) {
-        console.log('ouii')
         if (date.element?.getBoundingClientRect().x <= 60) {
+            // dates.forEach(date => date.element?.classList.remove('overlay'))
+            // date.element?.classList.add('overlay')
             markers.forEach(marker => marker.classList.remove('active'))
             markers[index].classList.add('active')
         }
@@ -65,6 +66,8 @@ function observeScroll() {
 
 
 function init() {
+
+    bindImagesToDate()
 
     // TODO: empty old labels
     for (let i = 0; i <= years; i++) {
@@ -95,9 +98,14 @@ function init() {
         timelineElement.appendChild(marker)
 
         markers.push(marker)
+        marker.addEventListener('click', e => {
+            document.querySelector('.containerPhoto').scrollTo(
+                date.element?.offsetLeft,
+                0
+            )
+        })
     }
 
-    bindImagesToDate()
     document.querySelector('.containerPhoto').addEventListener('scroll', observeScroll)
     observeScroll()
 }
