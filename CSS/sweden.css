@@ -113,12 +113,16 @@ body{
     height: 60%;
     object-fit: cover;
     border: 5px solid white;
+
+    box-shadow: 0 6px 10px -10px #000000;
 }
 .H500 img {
     width: 60%;
     height: 60%;
     object-fit: cover;
     border: 5px solid white;
+
+    box-shadow: 0 6px 10px -10px #000000;
 }
 .H700 {
     position: absolute;
@@ -146,6 +150,8 @@ body{
     height: 60%;
     object-fit: cover;
     border: 5px solid white;
+    
+    box-shadow: 0 6px 10px -10px #000000;
 }
 .V700 {
     position: absolute;
@@ -185,39 +191,47 @@ body{
 
 /*************** boutons end ***************/
 .END {
+    position: relative;
     z-index: -100;
 
     font-family: 'Eczar', serif;
     font-size: 1em;
 
-    padding: 10px;
-    margin:  auto;
+    margin: auto;
+    margin-top:20%;
     width: 20%;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-content: baseline;
+    align-items: baseline;
 }
 
 .prev a{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .retry a{
-    display: block;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .next a{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 /*************** FIN boutons end ***************/
 
 /*************** BAS ***************/
 .BAS {
+    position: relative;
     display: flex;
     flex-direction: column;
 
+    margin: auto;
+    margin-top:20%;
+    width: 20%;
 }
 
 .selecteur{
