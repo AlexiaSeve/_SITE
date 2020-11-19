@@ -6,20 +6,33 @@ html {
     box-sizing: border-box; /*  Les balises ne vont pas grandir avec le padding*/
 }
 
+/******* BODY *******/
+body{
+    
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+
+    margin: 0;
+    background-color: #ffc918 ;
+}
+
 /*  MOBILE MENU */
 
 .CROIX {
     position: absolute;
-    top: 1.4%;
+    top: 50px;
     right: calc(100vw + 5%);
     transition: right 0.2s ease-out;
 }
 
 .CROIX.is-active {
+    top: 50px;
     right: 5%;
 }
 
 .mobile-MENU {
+
     transform: translateX(100vw);
     transition: transform 0.2s ease-out;
 
@@ -28,9 +41,9 @@ html {
 
     left: 0;
 
-    z-index: 2002;
-    background: pink;
-    position: absolute;
+    z-index: 101;
+    background: white;
+    position: fixed;
 
     font-family: 'Poppins', sans-serif;  
 }
@@ -73,16 +86,22 @@ html {
     align-items: flex-end;
 }
 
+.mobile-MENU .navigation .menu ul{
+    margin-top: 60px;
+}
+
 .mobile-MENU .menu li{
     z-index: 2002;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 0;
 }
 
 .mobile-MENU .menu li img{
     width: 40px;
     vertical-align: middle;
-    color: black;
+    fill: black;
+    margin-left: 15px;
+
 }
 
 .mobile-MENU .logo {
@@ -96,17 +115,18 @@ html {
 }
 
 
-
-
-
 /******* HEADER *******/
 
 /* navigation */
 
 header {
+    z-index: 100;
 
+    position: fixed;
     width: 100%;
-    height: 160px;
+    height: 140px;
+
+    background-color: #ffc918 ;
 }
 
 a {
@@ -135,7 +155,6 @@ a {
  }
 
  .logo li {
-    z-index: 1000;
     padding-right: 20px;
     font-family: 'Poppins', sans-serif;
     vertical-align: middle;
@@ -150,7 +169,6 @@ a {
 
 /* menu */
 .menu li{
-    z-index: 1000;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
     vertical-align: middle;
@@ -163,6 +181,7 @@ a {
 }
 
 .navigation .logo ul {
+    margin-top: 40px;
     padding: 0;
 }
 
@@ -174,22 +193,12 @@ a {
 /** fin NAVIGATION **/
 /*************** fin HEADER ***************/
 
-
-body{
-    width: 100vw;
-    position: relative;
-    overflow-x: hidden;
-
-    margin: 0;
-    background-color: #ffc918 ;
-}
-
 /***** CONTAINER *****/
 
 .main-container{
-    display: block;
+    display: flex; 
+    flex-direction: column; 
     justify-content: space-between;
-    flex-direction: column;
 
     margin-left: 40px;
     margin-right: 40px;
@@ -197,15 +206,19 @@ body{
 
 .container { 
     display: flex; 
+    flex-direction: column; 
+    align-items: center;
     width: 100%;
+
+    margin-top: 140px;
 }
 
 .VOYAGE {
-    z-index: 2000;
+    z-index: 50;
 
     position: fixed;
-    left: -6%;
-    top: 20%;
+    left: -20px;
+    top: 147px;
     margin: 0;
 }
 
@@ -223,6 +236,7 @@ body{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    padding-left: 20px;
 }
 
 /***** photo Horizontale *****/
@@ -230,6 +244,8 @@ body{
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    margin-bottom: 20px;
 }
 .H700 img {
     width: 100%;
@@ -242,6 +258,9 @@ body{
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    margin-bottom: 20px;
+
 }
 .H500 img {
     width: 100%;
@@ -256,6 +275,9 @@ body{
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    margin-bottom: 20px;
+
 }
 .V700 img {
     width: 100%;
@@ -295,12 +317,15 @@ footer {
     background-color: black;
 
     position: flex;
-    bottom: 0;
     margin: 0px;
     width: 100%;
-    height: 40px;
+    height: 60px;
     display: flex;
     justify-content: flex-end;
+}
+
+footer .navigation {
+    width: 100%;
 }
 
 .reseaux ul {
@@ -309,17 +334,21 @@ footer {
 }
 
 .reseaux a{
-    z-index: 1000;
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
     vertical-align: middle;
-    padding-right: 50px;
+    
+    padding-left: 40px;
     color: white;
 }
 .reseaux img{
-    width: 20px;
+    width: 30px;
     vertical-align: middle;
     padding-right: 5px;
+}
+
+.reseaux a > span {
+    display: none;
 }
 
 .RETOUR {
@@ -327,14 +356,22 @@ footer {
 
     font-family: 'ECZAR', serif;
     color: white;
-    font-size: 10px;
+    font-size: 18px;
+
+    padding-left: 40px;
+
+
 }
 
 .RETOUR a {
     color: white;
+    padding-right: 10px;
 }
 
 .RETOUR img {
+    width: 25px;
+    padding-left: 5px;
+    vertical-align: middle;
     transform: rotate(180deg);
 }
 

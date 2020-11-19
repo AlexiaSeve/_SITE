@@ -16,9 +16,8 @@ html {
 }
 
 header {
-
     width: 100%;
-    height: 160px;
+    height: 140px;
 }
 
 a {
@@ -48,7 +47,6 @@ a {
  }
 
  .logo li {
-    z-index: 1000;
     padding-right: 20px;
     font-family: 'Poppins', sans-serif;
     vertical-align: middle;
@@ -88,8 +86,8 @@ body{
 
 .main-container{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+
 }
 
 .container {  
@@ -113,12 +111,16 @@ body{
     height: 60%;
     object-fit: cover;
     border: 5px solid white;
+
+    box-shadow: 0 6px 10px -10px #000000;
 }
 .H500 img {
     width: 60%;
     height: 60%;
     object-fit: cover;
     border: 5px solid white;
+
+    box-shadow: 0 6px 10px -10px #000000;
 }
 .H700 {
     position: absolute;
@@ -146,6 +148,8 @@ body{
     height: 60%;
     object-fit: cover;
     border: 5px solid white;
+    
+    box-shadow: 0 6px 10px -10px #000000;
 }
 .V700 {
     position: absolute;
@@ -185,56 +189,68 @@ body{
 
 /*************** boutons end ***************/
 .END {
+    position: relative;
     z-index: -100;
 
-    font-family: 'eczar', serif;
+    font-family: 'Eczar', serif;
     font-size: 1em;
 
-    padding: 10px;
-    margin:  auto;
+    margin: auto;
+    margin-top:20%;
     width: 20%;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-content: baseline;
+    align-items: baseline;
 }
 
 .prev a{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .retry a{
-    display: block;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .next a{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 /*************** FIN boutons end ***************/
 
+/*************** BAS ***************/
+.BAS {
+
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    margin-top:20%;
+    width: 20%;
+}
 
 .selecteur{
     z-index: -100;
 
-    margin:  auto;
-    width: 10%;
-    bottom: 0;
-
-    display: block;
-    justify-content: space-between;
-    align-content: baseline;
+    display: flex;
+    flex-direction: column;
   }
 
 .selecteur p {
-    text-align: center;
     font-family: 'eczar', serif;
     font-size: 1.2em;
 }
 
 .BoutonSelecteur {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    width: 80px;
 }
 
 .ball {
@@ -283,7 +299,6 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
   }
-
   
   input:checked + .slider {
     background-color: black;
@@ -326,7 +341,6 @@ footer {
     justify-content: flex-end;
 }
 
-
 .reseaux ul {
     display: flex;
     margin: 0px 40px 0px 40px;
@@ -344,6 +358,14 @@ footer {
     width: 20px;
     vertical-align: middle;
     padding-right: 5px;
+}
+
+.icon-reseaux {
+    display: none;
+}
+
+.RETOUR {
+    display: none;
 }
 /******* fin FOOTER *******/
 

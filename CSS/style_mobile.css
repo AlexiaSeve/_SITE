@@ -7,6 +7,12 @@ html {
     box-sizing: border-box; /*  Les balises ne vont pas grandir avec le padding*/
 }
 
+p {
+    z-index: -1;
+    color: black;
+    font-family: 'Poppins', sans-serif; 
+}
+
 /******* HEADER *******/
 
 /* navigation */
@@ -84,31 +90,40 @@ body{
 
 /*** PHOTOS ***/
 
-.containerPhoto {  
-    display: flex;
-    overflow: scroll;
-    justify-content: space-between; /*  les éléments se placent de chaque coté */
- 
+.main-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+
     margin-left: 40px;
-    width: 98%;
+    margin-right: 40px;
 }
 
-p {
-    z-index: -1;
-    color: black;
-    font-family: 'Poppins', sans-serif; 
+.containerPhoto {  
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+
+    margin-top: 140px;
+}
+
+.photo {
+    object-fit: cover;
+    width: 100%;
 }
 
 .photo a .text-voyage {
-    display: none;
+    font-family: 'Eczar',serif;
+    font-size: 2vh;
+
+    margin-bottom: 20px;
 }
 
-
 .photo img{
-    z-index: 1000;
-    width:400px; 
-    display: block;
-    margin-right: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border: 5px solid white;
 }
 
@@ -130,7 +145,7 @@ footer {
     background-color: black;
     position: fixed;
     bottom: 0;
-    margin: 0px;
+    margin: 0;
     width: 100%;
     height: 40px;
     display: flex;
@@ -157,94 +172,3 @@ footer ul {
 }
 /******* fin FOOTER *******/
 
-/***
-Timeline
-***/
-
-.timeline {
-    margin-top: 80px;
-    position: relative;
-}
-
-.timeline .line {
-    height: 1px;
-    background: black;
-    width: 100%;
-    margin-left: 40px;
-    position: relative;
-}
-
-/* .timeline .line::before {
-    content: '';
-    position: absolute;
-    height: 12px;
-    width: 1px;
-    left: 0;
-    top: -5px;
-    background-color: black;
-} */
-
-.timeline .date-label {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-}
-
-.timeline .date-label::before {
-    position: absolute;
-    top: -5px;
-    left: -2px;
-    height: 10px;
-    content: '';
-    width: 1px;
-    background: black;
-}
-
-.timeline .marker {
-    position: absolute;
-    bottom: 16px;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-.timeline .marker span {
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-}
-
-.timeline .marker.active span {
-    opacity: 1;
-}
-
-.timeline .marker::before {
-    position: absolute;
-    top: 35px;
-    left: calc(50% - 5px);
-    height: 10px;
-    content: '';
-    width: 10px;
-    border-radius: 10px;
-    border: solid black 1px;
-    transition: background-color 0.2s ease;
-    background-color: #ffc918;
-}
-
-.timeline .marker.active::before {
-    background-color: black;
-}
-
-.containerPhoto div:last-child > img {
-    margin-right: 80vw;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-.containerPhoto::-webkit-scrollbar {
-    display: none;
-}
-
-.containerPhoto {
-    scrollbar-width: none;
-}
