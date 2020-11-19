@@ -186,8 +186,7 @@ a {
 }
 
 .main-container .navigation .menu ul {
-    display: none;
-    
+    display: none;  
 }
 /* fin MENU */
 /** fin NAVIGATION **/
@@ -359,8 +358,6 @@ footer .navigation {
     font-size: 18px;
 
     padding-left: 40px;
-
-
 }
 
 .RETOUR a {

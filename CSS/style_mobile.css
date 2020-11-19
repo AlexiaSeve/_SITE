@@ -13,13 +13,127 @@ p {
     font-family: 'Poppins', sans-serif; 
 }
 
+/******* BODY *******/
+body{
+    
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+
+    margin: 0;
+    background-color: #ffc918 ;
+}
+
+/*  MOBILE MENU */
+
+.CROIX {
+    position: absolute;
+    top: 50px;
+    right: calc(100vw + 5%);
+    transition: right 0.2s ease-out;
+}
+
+.CROIX.is-active {
+    top: 50px;
+    right: 5%;
+}
+
+.mobile-MENU {
+
+    transform: translateX(100vw);
+    transition: transform 0.2s ease-out;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+
+    z-index: 101;
+    background: white;
+    position: fixed;
+
+    font-family: 'Poppins', sans-serif;  
+}
+
+.visible {
+    transform: translateX(0);
+}
+
+.noscroll {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mobile-MENU .navigation{
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding: 40px;
+}
+
+.mobile-MENU .menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-MENU ul:first-of-type{
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mobile-MENU .navigation .menu ul{
+    margin-top: 60px;
+}
+
+.mobile-MENU .menu li{
+    z-index: 2002;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.mobile-MENU .menu li img{
+    width: 40px;
+    vertical-align: middle;
+    fill: black;
+    margin-left: 15px;
+
+}
+
+.mobile-MENU .logo {
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.mobile-MENU .logo ul{
+    flex-direction: row;
+}
+
+
 /******* HEADER *******/
 
 /* navigation */
 
 header {
+    z-index: 100;
+
+    position: fixed;
     width: 100%;
     height: 140px;
+
+    background-color: #ffc918 ;
 }
 
 a {
@@ -37,7 +151,6 @@ a {
 
 .navigation ul{
     display: flex;
-    margin: 40px 40px 0px 40px;
 }
 
 .logo ul {
@@ -61,34 +174,73 @@ a {
     width: 50px;
  }
 
-/******* menu *******/
-
+/* menu */
 .menu li{
     font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
     vertical-align: middle;
+    padding-right: 50px;
 }
 .menu img{
     width: 30px;
     vertical-align: middle;
-    margin-left: 30px;
-    margin-right: 5px;
+    padding-right: 5px;
 }
-/******* fin menu *******/
 
-
-
-/*** FIN navigation ***/
-
-body{
-    max-height: 100vh;
-    margin: 0;
+.navigation .logo ul {
+    margin-top: 40px;
     padding: 0;
-    background-color: #ffc918;
-    position: relative;
+}
+
+.main-container .navigation .menu ul {
+    display: none; 
+}
+/* fin MENU */
+/** fin NAVIGATION **/
+/*************** fin HEADER ***************/
+
+/***** CONTAINER *****/
+
+.main-container{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+
+    margin-top: 140px;
+}
+
+.VOYAGE {
+    z-index: 50;
+
+    position: fixed;
+    left: -20px;
+    top: 147px;
+    margin: 0;
+}
+
+.VOYAGE p {
+    font-family: 'Eczar', serif;
+    color: black;
+    font-weight: 700;
+    transform: rotate(-90deg);
+    font-size: 50px;
 }
 
 /*** PHOTOS ***/
+
+.timeline {
+    display: none;
+}
 
 .main-container {
     display: flex; 
@@ -143,32 +295,41 @@ body{
 
 footer {
     background-color: black;
-    position: fixed;
-    bottom: 0;
-    margin: 0;
+
+    position: flex;
+    margin: 0px;
     width: 100%;
-    height: 40px;
+    height: 60px;
     display: flex;
     justify-content: flex-end;
 }
 
-footer ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
+footer .navigation {
+    width: 100%;
+}
+
+.reseaux ul {
+    display: flex;
+    margin: 0px 40px 0px 40px;
+
 }
 
 .reseaux a{
-    z-index: 1000;
     font-family: 'Poppins', sans-serif;
-    font-size: 10px;
+    font-size: 1.5vh;
     vertical-align: middle;
+
     padding-right: 50px;
     color: white;
 }
 .reseaux img{
-    width: 20px;
+    width: 30px;
     vertical-align: middle;
     padding-right: 5px;
+}
+
+.reseaux a > span {
+    display: none;
 }
 /******* fin FOOTER *******/
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen and (min-width: 855px)" href="CSS/style.css" /> <!-- Pour tout le monde -->
     <link rel="stylesheet" media="screen and (max-width: 854px)" href="CSS/style_mobile.css" /> 
+    <link href="CSS/hamburgers.css" rel="stylesheet">
 
 
     <!-- TYPO -->
@@ -14,38 +15,88 @@
     <title>Alexia Sève - Photographies</title>
 </head>
 <body>
-
-<header>
-
+<!-- elements mobile -->
+<div class="mobile-MENU">
     <div class="navigation">
-        <nav class="logo">
-                <ul>
-                    <li><img src="IMG/Logo_AlexiaSeve.svg"></img></li>
-                    <li>alexia sève <br><b>- photographies</b></li>
-                </ul>
-        </nav>  
-
-
         <nav class="menu">
             <ul>
                 <li>
+                    <div class="CROIX">
+                        <button class="hamburger hamburger--spin" type="button">
+                            <span class="hamburger-box">
+                              <span class="hamburger-inner"></span>
+                            </span>
+                        </button>     
+                    </div>
+                </li>
+                <li>
                     <a href="alexiaseve.com">
+                        PROJETS GRAPHIQUES
                         <img src="IMG/escalier.svg" alt="">
-                        Projets graphiques
                     </a>
                 </li>
                 <li>
+                    CONTACT
                     <img src="IMG/info.svg" alt="">
-                    Contact
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/alexia.seve/">
+                        INSTAGRAM                       
+                        <img src="IMG/flechenoire_reseaux.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/alexia.seve/">
+                        BEHANCE
+                        <img src="IMG/flechenoire_reseaux.svg" alt="" >
+                    </a>
                 </li>
             </ul>
         </nav>
+
+        <nav class="logo">
+            <ul>
+                <li><img src="IMG/Logo_AlexiaSeve.svg"></img></li>
+                <li>alexia sève <br><b>- photographies</b></li>
+            </ul>
+        </nav> 
+
     </div> <!-- fin DIV NAVIGATION -->
+</div>
+<!-- FIN elements mobile -->
 
-</header>
+<div class="main-container">
 
-    <div class="main-container">
-        <div class="containerPhoto"> <!-- containerPhoto -->
+    <header>
+
+        <div class="navigation">
+            <nav class="logo">
+                    <ul>
+                        <li><img src="IMG/Logo_AlexiaSeve.svg"></img></li>
+                        <li>alexia sève <br><b>- photographies</b></li>
+                    </ul>
+            </nav>  
+    
+    
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="alexiaseve.com">
+                            <img src="IMG/escalier.svg" alt="">
+                            Projets graphiques
+                        </a>
+                    </li>
+                    <li>
+                        <img src="IMG/info.svg" alt="">
+                        Contact
+                    </li>
+                </ul>
+            </nav>
+        </div> <!-- fin DIV NAVIGATION -->
+    
+    </header>
+
+    <div class="containerPhoto"> <!-- containerPhoto -->
             <!--PHOTO 1-->
             <div class="photo">  
                 <a href="sweden.html" target="">
@@ -75,12 +126,13 @@
                     <div class="overlay"></div>
                     <div class="text-voyage"><b>2015 - </b>Suède</div>
                 </a>   </div>
-        </div> <!-- fin containerPhoto -->   
-        <div class="timeline">
+    </div> <!-- fin containerPhoto --> 
+
+    <div class="timeline">
             <img src="./IMG/scroll_arrow.svg" alt=">>">
             <div class="line"></div>
-        </div>
     </div>
+</div>
 
 <footer>
     <div class="navigation">
@@ -89,13 +141,15 @@
                 <li>
                     <a href="https://www.instagram.com/alexia.seve/">
                         <img src="IMG/flecheblanche_reseaux.svg" alt="">
-                        INSTAGRAM
+                        <span>INSTAGRAM</span>
+                        <img class="icon-reseaux" src="IMG/icon-instagram.svg" alt="">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/alexia.seve/">
                         <img src="IMG/flecheblanche_reseaux.svg" alt="" style="color: white;">
-                        BEHANCE
+                        <span>BEHANCE</span>
+                        <img class="icon-reseaux" src="IMG/icon-behance.svg" alt="">
                     </a>
                 </li>
             </ul>
@@ -103,6 +157,9 @@
     </div>
 </footer>
 
-<script src="JS/timeline.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="JS/script.js" defer></script>
+    <script src="JS/timeline.js"></script>
 </body>
 </html>
