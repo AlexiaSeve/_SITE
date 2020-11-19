@@ -10,7 +10,7 @@ html {
 
 .CROIX {
     position: absolute;
-    top: 1,5%;
+    top: 1.4%;
     right: calc(100vw + 5%);
     transition: right 0.2s ease-out;
 }
