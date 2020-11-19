@@ -346,6 +346,10 @@ footer {
     padding-right: 5px;
 }
 
+.icon-reseaux {
+    display: none;
+}
+
 .RETOUR {
     display: none;
 }
