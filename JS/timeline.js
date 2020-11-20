@@ -1,19 +1,27 @@
 const dates = [
     {
-        name: 'Copenhague',
+        name: 'Barcelone',
         date: new Date('2015-02')
     },
     {
-        name: 'Toto',
-        date: new Date('2015-03-15')
+        name: 'Marseille',
+        date: new Date('2016-08')
+    },
+    {
+        name: 'Bordeaux',
+        date: new Date('2018-04')
     },
     {
         name: 'Copenhague',
-        date: new Date('2015-04')
+        date: new Date('2018-06')
     },
     {
-        name: 'Copenhague',
-        date: new Date('2015-10')
+        name: 'Göteborg',
+        date: new Date('2018-07')
+    },
+    {
+        name: 'Berlin',
+        date: new Date('2019-02')
     },
     // {
     //     name: 'Copenhague',
@@ -35,7 +43,7 @@ const dates = [
 
 const limits = {
     min: new Date('2015'),
-    max: new Date('2016')
+    max: new Date('2020')
 }
 
 const years = limits.max.getFullYear() - limits.min.getFullYear()

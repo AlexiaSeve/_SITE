@@ -44,6 +44,7 @@ a {
 
  ul {
     list-style: none;
+    padding: 0;
  }
 
  .logo li {
@@ -65,7 +66,7 @@ a {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
     vertical-align: middle;
-    padding-right: 50px;
+    padding-left: 50px;
 }
 .menu img{
     width: 30px;
@@ -110,33 +111,38 @@ body{
 
 /***** selecteur ACTION *****/
 .photos-wrapper2 {
+    z-index: 1000;
     display: none;
 }
 .photos-wrapper3 {
+    z-index: 1000;
     display: none;
 }
 
 .photos-wrapper {
+    z-index: 1000;
     height: 100%;
     overflow: hidden;
 }
 
 .visible {
+    transition: .4s;
+    z-index: 1000;
     display: block;
 }
 
 /***** photo Horizontale *****/
 .H700 img {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     border: 5px solid white;
 
     box-shadow: 0 6px 10px -10px #000000;
 }
 .H500 img {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     border: 5px solid white;
 
@@ -164,8 +170,8 @@ body{
 
 /***** photo Verticale *****/
 .V700 img {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     border: 5px solid white;
     
@@ -240,18 +246,25 @@ body{
 
 /*************** BAS ***************/
 .BAS {
+    z-index: 0;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    /* z-index: -100; */
+
+    font-family: 'Eczar', serif;
+    font-size: 1em;
+
     margin: auto;
-    margin-top:30%;
+    margin-top:10%;
     width: 20%;
+
 }
 
 .selecteur{
-    /* z-index: -100; */
+    z-index: -100;
 
     display: flex;
     flex-direction: column;
@@ -272,6 +285,7 @@ body{
 }
 
 .BoutonSelecteur div{
+    transition: .4s;
     cursor: pointer;
 }
 
@@ -287,13 +301,13 @@ body{
     border-radius: 50%;
 
     cursor: pointer;
+    transition: .4s;
 }
 
 .ballOne :hover {
     background-color: black;
+    transition: .4s;
 }
-
-
 
 .ballTwo {
     width: 15px;
@@ -301,6 +315,7 @@ body{
     /*background-color: black;*/
     border: solid 0.25em  black;
     border-radius: 50% ;
+    transition: .4s;
 }
 
 .ballThree {
@@ -309,6 +324,7 @@ body{
     /*background-color: black;*/
     border: solid 0.25em  black;
     border-radius: 50% ;
+    transition: .4s;
 }
 
 
@@ -406,7 +422,7 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
     vertical-align: middle;
-    padding-right: 50px;
+    padding-left: 50px;
     color: white;
 }
 .reseaux img{

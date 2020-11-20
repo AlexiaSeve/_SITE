@@ -45,6 +45,7 @@ a {
 
  ul {
     list-style: none;
+    padding: 0;
  }
 
  .logo li {
@@ -66,7 +67,7 @@ a {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
     vertical-align: middle;
-    padding-right: 50px;
+    padding-left: 50px;
 }
 .menu img{
     width: 30px;
@@ -102,10 +103,22 @@ body{
  
     margin-left: 40px;
     width: 98%;
+
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.containerPhoto div:last-child img {
+    margin-right: 80vw;
+}
+
+.containerPhoto::-webkit-scrollbar {
+    display: none;
 }
 
 p {
     z-index: -1;
+
     color: black;
     font-family: 'Poppins', sans-serif; 
 }
@@ -114,11 +127,22 @@ p {
     display: none;
 }
 
+.photo {
+    width: 100%;
+    height: 100%;
+}
+
+.photo a {
+    width: 100%;
+    height: 100%;
+}
+
 
 .photo img{
-    z-index: 1000;
-    width:400px; 
-    display: block;
+    width:600px; 
+
+    display: flex;
+    flex-direction: row;
     margin-right: 40px;
     border: 5px solid white;
 }
@@ -177,8 +201,15 @@ footer {
 Timeline
 ***/
 
+.timeline .scroll-invitation p {
+    color: black;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 100%;
+    font-weight: 600;
+}
+
 .timeline {
-    margin-top: 80px;
+    margin-top: 1%;
     position: relative;
 }
 
@@ -250,21 +281,12 @@ Timeline
     background-color: black;
 }
 
-.containerPhoto div:last-child img {
-    margin-right: 80vw;
-}
+/***
+FIN Timeline
+***/
 
 body {
     overflow-x: hidden;
-}
-
-.containerPhoto::-webkit-scrollbar {
-    display: none;
-}
-
-.containerPhoto {
-    scrollbar-width: none;
-    scroll-behavior: smooth
 }
 
 .scroll-invitation {
