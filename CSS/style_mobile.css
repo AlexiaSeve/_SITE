@@ -239,7 +239,75 @@ a {
 /*** PHOTOS ***/
 
 .timeline {
+    position: fixed;
+    /* left: 20px;
+    transform: rotate(90deg);
+    top: -4420px; */
+    top: 140px;
+    left: 20px;
+    height: 100%;
+}
+
+.timeline .scroll-invitation {
     display: none;
+}
+
+.timeline .line {
+    width: 1px;
+    background: black;
+    height: 100%;
+    margin-left: 40px;
+    position: relative;
+}
+
+.timeline .date-label {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    left: 20px;
+    background-color: #ffc918;
+    z-index: 50;
+}
+
+.timeline .date-label::before {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    height: 1px;
+    content: '';
+    width: 10px;
+    background: black;
+}
+
+.timeline .marker {
+    position: absolute;
+    bottom: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.timeline .marker span {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.timeline .marker::before {
+    position: absolute;
+    /* top: 35px; */
+    top: 0;
+    left: 35px;
+    height: 10px;
+    content: '';
+    width: 10px;
+    border-radius: 10px;
+    border: solid black 1px;
+    transition: background-color 0.2s ease;
+    background-color: #ffc918;
+    cursor: pointer;
+}
+
+.timeline .marker.active::before {
+    background-color: black;
 }
 
 .main-container {
@@ -247,7 +315,7 @@ a {
     flex-direction: column; 
     justify-content: space-between;
 
-    margin-left: 40px;
+    margin-left: 140px;
     margin-right: 40px;
 }
 

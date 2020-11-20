@@ -44,9 +44,13 @@ const timelineElement = document.querySelector('.timeline')
 const timelineLineElement = document.querySelector('.timeline .line')
 const timelineSize = timelineElement.getBoundingClientRect()
 
-const maxWidth = timelineSize.width - 200
+const isMobile = window.innerWidth < 800
+
+const max = isMobile ? timelineSize.height - 220 : timelineSize.width - 200
 
 const markers = []
+
+const direction = isMobile ? 'top' : 'left'
 
 function bindImagesToDate() {
     [...document.querySelectorAll('.containerPhoto .photo')].forEach((photo, index) => dates[index].element = photo)
@@ -54,7 +58,13 @@ function bindImagesToDate() {
 
 function observeScroll() {
     for (const [index, date] of Object.entries(dates)) {
-        if (date.element?.getBoundingClientRect().x <= 60) {
+        const condition = isMobile
+            ? (date.element?.getBoundingClientRect().y <= 120)
+            : (date.element?.getBoundingClientRect().x <= 60)
+
+        console.log(condition);
+        
+        if (condition) {
             // dates.forEach(date => date.element?.classList.remove('overlay'))
             // date.element?.classList.add('overlay')
             markers.forEach(marker => marker.classList.remove('active'))
@@ -79,7 +89,7 @@ function init() {
     
         dateLabel.appendChild(dateText)
     
-        dateLabel.style.left = `${ maxWidth *i/years + 40 }px`;
+        dateLabel.style[direction] = `${ max *i/years + (isMobile ? 0 : 40) }px`;
         timelineElement.appendChild(dateLabel)
     }
 
@@ -94,7 +104,7 @@ function init() {
 
         const yearsAfterLimit = (date.date - limits.min) / ( 1000 * 3600 * 24 * 365 )
     
-        marker.style.left = `${ maxWidth * yearsAfterLimit/years + 40 }px`;
+        marker.style[direction] = `${ max * yearsAfterLimit/years + 40 }px`;
         timelineElement.appendChild(marker)
 
         markers.push(marker)
@@ -107,9 +117,10 @@ function init() {
     }
 
     document.querySelector('.containerPhoto').addEventListener('scroll', observeScroll)
+    if (isMobile) window.addEventListener('scroll', observeScroll)
     observeScroll()
 }
 
 init()
 
-window.addEventListener('resize', init)
+// window.addEventListener('resize', init)
