@@ -24,7 +24,7 @@ const photoWrapper3 = document.querySelector('.photos-wrapper3')
 
 const buttons = [...document.querySelectorAll('.BoutonSelecteur div')]
 
-document.querySelector( ".ballOne" ).addEventListener('click', function(e) {
+document.querySelector( ".ballOne" )?.addEventListener('click', function(e) {
   selectorText.textContent = 'Suède 1'
   buttons.forEach(button => button.classList.remove('filled'))
   e.target.classList.add('filled')
@@ -33,7 +33,7 @@ document.querySelector( ".ballOne" ).addEventListener('click', function(e) {
   photoWrapper.classList.add('visible')
 });
 
-document.querySelector( ".ballTwo" ).addEventListener('click', function(e) {
+document.querySelector( ".ballTwo" )?.addEventListener('click', function(e) {
   selectorText.textContent = 'Suède 2'
   buttons.forEach(button => button.classList.remove('filled'))
   e.target.classList.add('filled')
@@ -42,7 +42,7 @@ document.querySelector( ".ballTwo" ).addEventListener('click', function(e) {
   photoWrapper2.classList.add('visible')
 });
 
-document.querySelector( ".ballThree" ).addEventListener('click', function(e) {
+document.querySelector( ".ballThree" )?.addEventListener('click', function(e) {
   selectorText.textContent = 'Suède 3'
   buttons.forEach(button => button.classList.remove('filled'))
   e.target.classList.add('filled')

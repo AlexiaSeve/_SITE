@@ -15,27 +15,27 @@ const dates = [
         name: 'Copenhague',
         date: new Date('2015-10')
     },
-    {
-        name: 'Copenhague',
-        date: new Date('2016-01-15')
-    },
-    {
-        name: 'Copenhague',
-        date: new Date('2016-11')
-    },
-    {
-        name: 'Copenhague',
-        date: new Date('2017-05')
-    },
-    {
-        name: 'Copenhague',
-        date: new Date('2017-07')
-    },
+    // {
+    //     name: 'Copenhague',
+    //     date: new Date('2016-01-15')
+    // },
+    // {
+    //     name: 'Copenhague',
+    //     date: new Date('2016-11')
+    // },
+    // {
+    //     name: 'Copenhague',
+    //     date: new Date('2017-05')
+    // },
+    // {
+    //     name: 'Copenhague',
+    //     date: new Date('2017-07')
+    // },
 ]
 
 const limits = {
     min: new Date('2015'),
-    max: new Date('2018')
+    max: new Date('2016')
 }
 
 const years = limits.max.getFullYear() - limits.min.getFullYear()
@@ -61,8 +61,6 @@ function observeScroll() {
         const condition = isMobile
             ? (date.element?.getBoundingClientRect().y <= 120)
             : (date.element?.getBoundingClientRect().x <= 60)
-
-        console.log(condition);
         
         if (condition) {
             // dates.forEach(date => date.element?.classList.remove('overlay'))
@@ -109,9 +107,12 @@ function init() {
 
         markers.push(marker)
         marker.addEventListener('click', e => {
-            document.querySelector('.containerPhoto').scrollTo(
+            !isMobile ? document.querySelector('.containerPhoto').scrollTo(
                 date.element?.offsetLeft,
                 0
+            ) : document.querySelector(':root').scrollTo(
+                0,
+                date.element?.offsetTop
             )
         })
     }
