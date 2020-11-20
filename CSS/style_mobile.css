@@ -149,6 +149,12 @@ a {
     padding : 0px;
 }
 
+.navigation .logo {
+    /* todo: change with proper positioning */
+    position: relative;
+    left: -100px;
+}
+
 .navigation ul{
     display: flex;
 }

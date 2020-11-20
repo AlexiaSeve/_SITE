@@ -104,6 +104,10 @@ body{
     display: none;
 }
 
+.photos-wrapper, .photos-wrapper2, .photos-wrapper3 {
+    display: none;
+}
+
 /***** selecteur ACTION *****/
 .photos-wrapper2 {
     display: none;
@@ -115,6 +119,10 @@ body{
 .photos-wrapper {
     height: 100%;
     overflow: hidden;
+}
+
+.visible {
+    display: block;
 }
 
 /***** photo Horizontale *****/
@@ -202,7 +210,7 @@ body{
 /*************** boutons end ***************/
 .END {
     position: relative;
-    z-index: -100;
+    /* z-index: -100; */
 
     font-family: 'Eczar', serif;
     font-size: 1em;
@@ -235,14 +243,15 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     margin: auto;
-    margin-top:20%;
+    margin-top:30%;
     width: 20%;
 }
 
 .selecteur{
-    z-index: -100;
+    /* z-index: -100; */
 
     display: flex;
     flex-direction: column;
@@ -251,6 +260,8 @@ body{
 .selecteur p {
     font-family: 'eczar', serif;
     font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .BoutonSelecteur {
@@ -258,6 +269,14 @@ body{
     flex-direction: row;
     justify-content: space-between;
     width: 80px;
+}
+
+.BoutonSelecteur div{
+    cursor: pointer;
+}
+
+.filled {
+    background-color: black;
 }
 
 .ballOne {
