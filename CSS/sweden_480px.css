@@ -232,6 +232,17 @@ a {
 
 /***** CONTAINER PHOTO *****/
 .photos-wrapper {
+    display: none;
+}
+.photos-wrapper2 {
+    display: none;
+}
+.photos-wrapper3 {
+    display: none;
+}
+
+
+.photos-wrapperALL {
     display: flex;
     flex-direction: column; 
     align-items: center;

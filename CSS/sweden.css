@@ -100,6 +100,18 @@ body{
 }
 
 /***** CONTAINER PHOTO *****/
+.photos-wrapperALL{
+    display: none;
+}
+
+/***** selecteur ACTION *****/
+.photos-wrapper2 {
+    display: none;
+}
+.photos-wrapper3 {
+    display: none;
+}
+
 .photos-wrapper {
     height: 100%;
     overflow: hidden;
@@ -204,17 +216,14 @@ body{
     justify-content: space-between;
     align-items: baseline;
 }
-
 .prev a{
     display: flex;
     flex-direction: column;
 }
-
 .retry a{
     display: flex;
     flex-direction: column;
 }
-
 .next a{
     display: flex;
     flex-direction: column;
@@ -223,8 +232,6 @@ body{
 
 /*************** BAS ***************/
 .BAS {
-
-    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -253,13 +260,42 @@ body{
     width: 80px;
 }
 
-.ball {
-    width: 10px;
-    height: 10px;
-    background-color: black;
+.ballOne {
+    width: 15px;
+    height: 15px;
+    /*background-color: black;*/
+    border: solid 0.25em black;
     border-radius: 50%;
-    transition: 0.5s ease-in-out;
+
+    cursor: pointer;
 }
+
+.ballOne :hover {
+    background-color: black;
+}
+
+
+
+.ballTwo {
+    width: 15px;
+    height: 15px;
+    /*background-color: black;*/
+    border: solid 0.25em  black;
+    border-radius: 50% ;
+}
+
+.ballThree {
+    width: 15px;
+    height: 15px;
+    /*background-color: black;*/
+    border: solid 0.25em  black;
+    border-radius: 50% ;
+}
+
+
+
+
+
 
 /**** bouton switch ****/
 .switch {

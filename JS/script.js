@@ -5,7 +5,7 @@ $( function() {
   } 
 );
 
-// dans le js
+// CROIX menu
 
 $('.CROIX').click(function()  {
   document.body.classList.toggle('noscroll')
@@ -14,8 +14,7 @@ $('.CROIX').click(function()  {
   document.querySelector('.CROIX').classList.toggle('is-active') 
 })
 
-
-
+// fin CROIX menu
 
 
 
